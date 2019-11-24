@@ -27,10 +27,10 @@ class ListService {
     listToRemoveItemFrom.items.splice(itemIndex, 1);
     _store.saveState();
   }
-  removeList(id, title) {
-    let removeTheList = _store.State.lists.find(l => l.id == id);
-    let listIndex = removeTheList.id["title"].findIndex(t => t.id == title);
-    removeTheList.id["title"].splice(listIndex, 1);
+  removeList(id) {
+    // let removeTheList = _store.State.lists.find(l => l.id == id);
+    let listIndex = _store.State.lists.findIndex(t => t.id == id);
+    _store.State.lists.splice(listIndex, 1);
     _store.saveState();
   }
 }

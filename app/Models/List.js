@@ -22,9 +22,7 @@ export default class List {
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
       </form>
-      <button class="btn btn-outline btn-danger" onclick="app.listController.removeList('${
-        this.title
-      }', '${this.id}')">Delete List</button>
+      <button class="btn btn-outline btn-danger" onclick="app.listController.removeList('${this.id}')">Delete List</button>
     </div>
     `;
   }
