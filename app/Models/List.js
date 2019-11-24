@@ -21,10 +21,10 @@ export default class List {
           <input type="text" class="form-control" id="task" placeholder="Enter Task Title..." />
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
-        <button class="btn btn-outline btn-danger" onclick="app.listController.removeList('${
-          this.id
-        }')">Delete List</button>
       </form>
+      <button class="btn btn-outline btn-danger" onclick="app.listController.removeList('${
+        this.title
+      }', '${this.id}')">Delete List</button>
     </div>
     `;
   }
