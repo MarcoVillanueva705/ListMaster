@@ -1,6 +1,7 @@
 import ListService from "../Services/ListService.js";
 import Items from "../Models/Item.js";
 import _store from "../store.js";
+import store from "../store.js";
 
 function _drawLists() {
   let listsTemplate = "";

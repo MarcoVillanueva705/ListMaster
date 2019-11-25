@@ -18,6 +18,7 @@ class Store {
     return _state;
   }
 
+  //REVIEW creates a copy of the raw data to give to controllers and services
   get Lists() {
     //NOTE use this getter to ensure the objects in list are all of type List
     return _state.lists.map(list => new List(list));

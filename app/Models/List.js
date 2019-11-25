@@ -5,6 +5,14 @@ export default class List {
   constructor({ id = generateId(), title, items }) {
     this.id = id || generateId();
     this.title = title;
+    //REVIEW what is map
+    // var x = [1, 2, 3];
+    // var y = x.map(num => {
+    //   return num * 2;
+    // });
+    // x.push(4);
+    //assembly line
+
     this.items = items.map(i => new Items(i));
     //TODO Your constructor takes in a data object that should have the properties you need to create your list here is a freebie, it will set the id its provided, or if that is undefined it will create a new one (this is an alternative to object destructuring)
   }
@@ -22,7 +30,9 @@ export default class List {
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
       </form>
-      <button class="btn btn-outline btn-danger" onclick="app.listController.removeList('${this.id}')">Delete List</button>
+      <button class="btn btn-outline btn-danger" onclick="app.listController.removeList('${
+        this.id
+      }')">Delete List</button>
     </div>
     `;
   }
