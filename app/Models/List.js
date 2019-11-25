@@ -18,7 +18,7 @@ export default class List {
       <form onsubmit="app.listController.addItem(event, '${this.id}')">
         <div class="form-group">
           <label for="title"></label>
-          <input type="text" class="form-control" id="task" placeholder="Enter Task Title..." />
+          <input type="text" class="form-control" id="task" required placeholder="Enter Task Title..." />
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
       </form>

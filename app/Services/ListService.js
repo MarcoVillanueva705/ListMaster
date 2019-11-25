@@ -24,14 +24,24 @@ class ListService {
   removeItem(listId, itemId) {
     let listToRemoveItemFrom = _store.State.lists.find(l => l.id == listId);
     let itemIndex = listToRemoveItemFrom.items.findIndex(i => i.id == itemId);
-    listToRemoveItemFrom.items.splice(itemIndex, 1);
-    _store.saveState();
+    let itemRemove = confirm("Remove This Item?");
+    if (itemRemove == true) {
+      listToRemoveItemFrom.items.splice(itemIndex, 1);
+      _store.saveState();
+    } else {
+      _store.saveState();
+    }
   }
   removeList(id) {
     // let removeTheList = _store.State.lists.find(l => l.id == id);
     let listIndex = _store.State.lists.findIndex(t => t.id == id);
-    _store.State.lists.splice(listIndex, 1);
-    _store.saveState();
+    let listRemove = confirm("Delete This List?");
+    if (listRemove == true) {
+      _store.State.lists.splice(listIndex, 1);
+      _store.saveState();
+    } else {
+      _store.saveState();
+    }
   }
 }
 
