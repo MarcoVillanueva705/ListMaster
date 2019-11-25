@@ -1,4 +1,4 @@
-import { generateId } from "../Utils.js";
+import { generateId } from "../utils.js";
 
 export default class Items {
   constructor({ id = generateId(), listId, task }) {
