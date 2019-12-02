@@ -28,7 +28,7 @@ export default class List {
           <label for="title"></label>
           <input type="text" class="form-control" id="task" required placeholder="Enter Task Title..." />
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary">Add Task</button>
       </form>
       <button class="btn btn-outline btn-danger" onclick="app.listController.removeList('${
         this.id
